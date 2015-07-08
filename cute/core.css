@@ -1,0 +1,54 @@
+
+
+/*列样式 - start*/
+.col{
+  min-height: 1px;
+  float:left;
+  left: 0;
+}
+.col-12{
+  width: 100%;
+}
+.col-3{
+  width: 25%;
+}
+/*列样式 - end*/
+
+/*tab样式 - start*/
+.tabs{
+  background-color: rgba(0, 0, 0, .85);
+  padding-top: 2px;
+  position: absolute;
+  bottom: 0;
+}
+.tab_item{
+  background-color: rgba(248, 248, 255, .85);
+}
+.tab_item:hover{
+  background-color: rgba(205, 197, 191, .85);
+}
+/*tab样式 - end*/
+
+/*tab图标样式 - start*/
+.tab_icon{
+  height: 64px;
+  width: 64px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tab_icon_search{
+  background: URL(../img/icon_search.ico);
+}
+.tab_icon_wall{
+  background: URL(../img/icon_wall.ico);
+}
+.tab_icon_setting{
+  background: URL(../img/icon_setting.ico);
+}
+.tab_icon_switch{
+  background: URL(../img/icon_switch.ico);
+}
+/*tab图标样式 - end*/

@@ -1,0 +1,1 @@
+document.body.addEventListener('touchstart', function () { //...¿Õº¯Êý¼´¿É});  
