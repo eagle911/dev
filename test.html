@@ -1,36 +1,34 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="gb2312">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     
     <title>ProfessorOnline</title>
 
-    <!-- Bootstrap -->
     <link href="cute/core.css" rel="stylesheet">
 
   <body>
-        <div class="container" id="main" role="main">
-            <ul class="menu">
-                <li><a href="#s1">Menu 1</a>
-                    <ul class="submenu">
-                        <li><a href="#">Submenu a</a></li>
-                        <li><a href="#">Submenu b</a></li>
-                        <li><a href="#">Submenu c</a></li>
-                        <li><a href="#">Submenu d</a></li>
-                        <li><a href="#">Submenu e</a></li>
-                        <li><a href="#">Submenu f</a></li>
-                        <li><a href="#">Submenu g</a></li>
-                        <li><a href="#">Submenu h</a></li>
-                        <li><a href="#">Submenu i</a></li>
-                        <li><a href="#">Submenu j</a></li>
-                    </ul>
-                </li>
- 
-            </ul>
-        </div>
-
+    <div class="tabs col col-12">
+	  <div class="tab_item col col-3" id="tab_search" onclick="javascript:;"><div class="tab_icon tab_icon_search"></div></div>
+	  <div class="tab_item col col-3" id="tab_wall" onclick="javascript:;"><div class="tab_icon tab_icon_wall"></div></div>
+	  <div class="tab_item col col-3" id="tab_switch" onclick="javascript:;"><div class="tab_icon tab_icon_switch"></div></div>
+	  <div class="tab_item col col-3" id="tab_setting" onclick="javascript:;"><div class="tab_icon tab_icon_setting"></div></div>
+	</div> 
+    <div class="content col col-12" id="content_search">
+	<img src="img/demo.jpg" style="width:100%; left:0;">
+	</div>
+	<div class="content col col-12" id="content_wall">
+	bbb
+	</div>
+	<div class="content col col-12" id="content_switch">
+	cc
+	</div>
+	<div class="content col col-12" id="content_setting">
+	dd
+	</div>
+  
     <script src="cute/core.js"></script>
   </body>
 </html>
