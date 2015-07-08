@@ -144,3 +144,18 @@ Git鼓励大量使用分支：
 合并某分支到当前分支：git merge <name>
 
 删除分支：git branch -d <name>
+用带参数的git log也可以看到分支的合并情况：
+
+$ git log --graph --pretty=oneline --abbrev-commit
+*   59bc1cb conflict fixed
+|\
+| * 75a857c AND simple
+* | 400b400 & simple
+|/
+* fec145a branch test
+...
+最后，删除feature1分支：
+
+$ git branch -d feature1
+Deleted branch feature1 (was 75a857c).
+工作完成。
