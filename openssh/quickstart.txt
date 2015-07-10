@@ -1,0 +1,32 @@
+1. OpenSSH很老了,所以...
+最开始只是因为openSSH启动不了，才用的MobaSSH，它配置简单兼容性好，缺点就是偷偷的建立了一个账户，让我感觉很不爽。所以决定把OpenSSH配置好。经过检查，发现OpenSSH安装的时候已经把环境变量添加好了，因此在命令行窗口是可以直接输入执行 ssh chmod等等命令的，但是当我输入ls的时候，提示缺少cygintl-2.dll，所以这个提醒了我更换检索词。最终解决这个问题。
+ 
+下载地址:
+http://sourceforge.net/projects/sshwindows/files/OpenSSH for Windows - Release/3.8p1-1 20040709 Build/setupssh381-20040709.zip/download
+ 
+1. 默认安装
+ 
+2. 补上cygintl-2.dll和cygwin1.dll
+下载：http://samanthahalfon.net/resources/cygwin_includes.zip
+将它们复制到c:\Program Files (x86)\OpenSSH\bin目录下，如果提示覆盖，则覆盖之，不然进行下面操作，会提示
+不能启动opensshd服务
+OpenSSH Error 1067:The process terminated unexpectedly  系统出错,进程意外终止
+
+
+3. 开始安装
+cd "c:\Program Files (x86)\OpenSSH\bin"
+mkgroup -l >> ..\etc\group                                    生成一个group
+mkpasswd -l [-u <username>] >> ..\etc\passwd
+比如：
+mkpasswd -l -u mxio >> ..\etc\passwd                          这样就生成用户名mxio的passwd文件，
+                                                              它调用的是系统用户名和密码
+ 
+cd ..\..\etc                                                  给权限
+..\bin\chown mxio *
+..\bin\chmod 600 *
+ 
+4. 启动opensshd服务                                           不出问题会提示启动成功
+net start opensshd
+ 
+5. 测试连接
+ssh mxio@localhost
