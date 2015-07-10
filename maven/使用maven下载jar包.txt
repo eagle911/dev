@@ -1,0 +1,1 @@
+C:\Users\IBM_ADMIN\Work\mavenp1\aaa>mvn.cmd -f pom.xml dependency:copy-dependencies
